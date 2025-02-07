@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<h1>Đăng nhập</h1>
+<form id="loginForm">
+    <label>Account</label>
+    <input type="text" id="account" required />
+    <label>Password</label>
+    <input type="password" id="password" required />
+    <button type="submit">Đăng nhập</button>
+</form>
+
+<p>Bạn chưa có tài khoản? <a href="signup.html">Đăng ký</a></p>
+
+<script src="../js/auth.js"></script>
+<script>
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const account = document.getElementById("account").value;
+      const password = document.getElementById("password").value;
+      await login(account, password);
+    });
+</script>
+</body>
+</html>

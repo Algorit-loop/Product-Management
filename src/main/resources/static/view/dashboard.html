@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Căn chỉnh phần header */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+        }
+
+        /* Định dạng thông tin user */
+        #userInfo {
+            background: #f3f3f3;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            text-align: right;
+            min-width: 200px;
+        }
+
+        /* Tạo khoảng cách giữa header và danh sách sản phẩm */
+        hr {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Dashboard -->
+<div class="dashboard-header">
+    <h1>Quản lý Sản phẩm</h1>
+
+    <!-- Hiển thị thông tin user -->
+    <div id="userInfo">
+        <p><strong>Account:</strong> <span id="userAccount"></span></p>
+        <p>Chào <strong id="userName"></strong></p>
+        <p><strong>Email:</strong> <span id="userEmail"></span></p>
+    </div>
+</div>
+
+<hr/> <!-- Đặt gạch ngang sau header -->
+
+<!-- Nút điều hướng -->
+<div>
+    <button id="btnAddProduct">Thêm sản phẩm</button>
+    <button id="btnManageUsers">Quản lý người dùng</button>
+    <button id="btnLogout">Đăng xuất</button>
+</div>
+
+<hr/>
+
+<!-- Khu vực hiển thị danh sách sản phẩm -->
+<div id="productList"></div>
+
+<!-- Liên kết các file JavaScript -->
+<script src="../js/auth.js"></script>
+<script src="../js/product.js"></script>
+<script src="../js/dashboard.js"></script> <!-- Tách logic dashboard ra file riêng -->
+</body>
+</html>

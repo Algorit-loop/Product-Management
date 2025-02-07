@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa sản phẩm</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<h1>Sửa sản phẩm</h1>
+
+<form id="updateProductForm">
+    <label>Tên sản phẩm:</label>
+    <input type="text" id="productName" required />
+
+    <label>Thương hiệu:</label>
+    <input type="text" id="productBrand" required />
+
+    <label>Danh mục:</label>
+    <input type="text" id="productCategory" required />
+
+    <label>Giá:</label>
+    <input type="number" id="productPrice" step="0.01" required />
+
+    <label>Giảm giá (%):</label>
+    <input type="number" id="productDiscount" />
+
+    <label>Mô tả:</label>
+    <textarea id="productDescription"></textarea>
+
+    <label>Hình ảnh:</label>
+    <input type="text" id="productImageFileName" />
+
+    <button type="submit">Cập nhật</button>
+</form>
+
+<button onclick="window.location.href='dashboard.html'">Quay về Dashboard</button>
+
+<!-- Liên kết các file JavaScript -->
+<script src="../js/auth.js"></script>
+<script src="../js/product.js"></script>
+<script src="../js/updateProduct.js"></script> <!-- Xử lý logic của trang này -->
+</body>
+</html>

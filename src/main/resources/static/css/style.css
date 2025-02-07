@@ -1,0 +1,119 @@
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+*/
+/* style.css: CSS đơn giản cho giao diện */
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+form label {
+  margin: 5px 0 2px;
+}
+
+form input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  transition: background-color 0.2s;
+}
+button:hover {
+  background-color: #bbb;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  width: 100%;
+}
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+table th {
+  background-color: #eee;
+}
+
+#errorMsg {
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách Người dùng</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Liên kết style.css -->
+</head>
+<body>
+<header>
+    <h1>Danh sách Người dùng</h1>
+</header>
+<main>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tài khoản</th>
+            <th>Email</th>
+            <th>Họ</th>
+            <th>Tên</th>
+            <th>Ngày sinh</th>
+            <th>Vai trò</th>
+        </tr>
+        </thead>
+        <tbody id="user-table-body">
+        <!-- Dữ liệu sẽ được thêm vào đây bởi user.js -->
+        </tbody>
+    </table>
+</main>
+
+<!-- Liên kết các file JavaScript -->
+<script src="../js/auth.js"></script> <!-- Đảm bảo auth.js tải trước -->
+<script src="../js/user.js"></script> <!-- user.js tải sau -->
+
+<!--<script>-->
+<!--    document.addEventListener("DOMContentLoaded", async function () {-->
+<!--        checkAdminAccess(); // Kiểm tra xem có phải admin không-->
+
+<!--        try {-->
+<!--            const users = await fetchUsers();-->
+<!--            renderUserList(users);-->
+<!--        } catch (err) {-->
+<!--            console.error("Lỗi khi tải danh sách người dùng:", err);-->
+<!--            alert("Không thể tải danh sách người dùng.");-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+
+</body>
+</html>

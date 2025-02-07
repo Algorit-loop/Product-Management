@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<h1>Đăng ký</h1>
+<form id="signupForm">
+    <div>
+        <label for="account">Tài khoản:</label>
+        <input type="text" id="account" name="account" required />
+    </div>
+    <div>
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+    </div>
+    <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" />
+    </div>
+    <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" />
+    </div>
+    <div>
+        <label for="dob">Ngày sinh:</label>
+        <input type="date" id="dob" name="dob" />
+    </div>
+    <button type="submit">Đăng ký</button>
+</form>
+
+<p>Bạn đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+
+<script src="../js/auth.js"></script>
+<script>
+    const signupForm = document.getElementById('signupForm');
+    signupForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const account = document.getElementById('account').value;
+      const password = document.getElementById('password').value;
+      const email = document.getElementById('email').value;
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const dob = document.getElementById('dob').value;
+
+      try {
+        await signup({account, password, email, firstName, lastName, dob});
+      } catch (error) {
+        alert("Đăng ký thất bại: " + error);
+      }
+    });
+</script>
+</body>
+</html>
