@@ -1,12 +1,10 @@
-const API_URL = "http://localhost:8080/users"; // URL API
-
 /**
  * Gọi API lấy danh sách người dùng
  * @returns {Promise<Array>} Mảng danh sách người dùng
  */
 async function fetchUsers() {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch("/users");
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
         const data = await response.json();
